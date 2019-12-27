@@ -55,7 +55,7 @@ output "security_groups" {
 }
 
 output "vpc_security_group_ids" {
-  description = "List of associated security groups of instances, if running in non-default VPC"
+  description = "List  of of associated security groups of instances, if running in non-default VPC"
   value       = ["${aws_instance.web-1.*.vpc_security_group_ids}"]
 }
 

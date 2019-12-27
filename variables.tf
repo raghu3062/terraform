@@ -1,5 +1,3 @@
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
 variable "aws_region" {}
 variable "amis" {
     description = "AMIs by region"
@@ -28,14 +26,6 @@ variable "azs" {
   type = "list"
   default = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
-variable "environment" { default = "dev" }
-variable "instance_type" {
-  type = "map"
-  default = {
-    dev = "t2.nano"
-    test = "t2.micro"
-    prod = "t2.medium"
-    }
-}
+
 
 

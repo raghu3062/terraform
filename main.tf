@@ -91,3 +91,11 @@ resource "aws_security_group" "allow_all" {
 }
 
 
+terraform {
+  backend "s3" {
+    encrypt = true
+    bucket = "raghutfstate"
+    key    = "production.tfstate"
+    region = "us-east-1"
+  }
+}
